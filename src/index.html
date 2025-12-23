@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Редактор списка</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Редактор списка товаров</h1>
+
+      <button id="add-button" class="btn btn-primary">Добавить товар</button>
+
+      <div class="product-grid-header">
+        <div class="grid-header">
+          <div class="grid-header-name">Название</div>
+          <div class="grid-header-description">Описание</div>
+          <div class="grid-header-price">Цена</div>
+          <div class="grid-header-actions">Действия</div>
+        </div>
+      </div>
+      <div class="product-grid" id="product-list">
+        <!-- Список товаров будет генерироваться здесь -->
+      </div>
+
+      <!-- Модальное окно для редактирования/добавления -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title">Добавить товар</h2>
+          <form id="product-form">
+            <input type="hidden" id="product-id" />
+            <div class="form-group">
+              <label for="name">Название:</label>
+              <input type="text" id="name" name="name" />
+              <div class="error-message" id="name-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="description">Описание:</label>
+              <textarea id="description" name="description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="price">Цена:</label>
+              <input
+                type="number"
+                id="price"
+                name="price"
+                step="0.01"
+              />
+              <div class="error-message" id="price-error"></div>
+            </div>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Модальное окно для подтверждения удаления -->
+      <div id="delete-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Подтверждение удаления</h2>
+          <p>Вы действительно хотите удалить этот товар?</p>
+          <button id="confirm-delete" class="btn btn-danger">Удалить</button>
+          <button id="cancel-delete" class="btn btn-secondary">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
