@@ -67,7 +67,7 @@ jobs:
 
     # Шаг 4: Запуск unit-тестов
     - name: Run unit tests
-      run: npm test:unit
+      run: npm run test:unit
 
     # Шаг 5: Запуск тестов с покрытием кода
     - name: Run tests with coverage
