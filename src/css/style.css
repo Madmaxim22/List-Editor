@@ -126,6 +126,7 @@ h1 {
 .product-grid-header {
     display: grid;
     grid-template-columns: 2fr 3fr 1fr 1fr;
+    gap: 1px;
     background-color: #f8f9fa;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
